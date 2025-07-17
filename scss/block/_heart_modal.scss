@@ -1,0 +1,52 @@
+.heart_modal {
+    background-color: rgba(0, 0, 0, 0.323);
+    position: fixed;
+    height: 100%;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.heart_modal_active {
+    display: flex;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.heart_modal_content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 500px;
+    height: 500px;
+    padding: 45px 50px;
+    border-radius: 15px;
+    text-align: center;
+    overflow-y: scroll;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.heart_modal_active .heart_modal_content {
+    transform: scale(1);
+}
+
+.heart_modal_exit_btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    background-color: inherit;
+    border: none;
+    color: rgb(255, 80, 80);
+    font-weight: 900;
+}
+
+.heart_modal_exit_btn:hover {
+    color: red;
+}
