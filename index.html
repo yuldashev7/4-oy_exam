@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Document</title>
 </head>
 
@@ -29,8 +30,8 @@
                 <div class="top_header_buy_products">
                     <button class="top_header_like_btn"></button>
                     <p class="top_header_like_text">Likes</p>
-                    <a class="top_header_buy_btn" href="items.html" target="_blank"></a>
-                    <a class="top_header_buy_text" href="items.html" target="_blank">Items</a>
+                    <button class="top_header_buy_btn"></button>
+                    <a class="top_header_buy_text" href="#" target="_blank">Items</a>
                     <input class="top_header_input" type="text" placeholder="$0.00">
                     <span class="top_header_search"></span>
                 </div>
@@ -71,10 +72,26 @@
             <div class="container">
                 <div class="hero_block">
                     <div class="hero_content">
-                        <img class="hero_img" src="./img/hero_img.png" alt="img">
+                        <div class="slider">
+                            <div class="slider_items">
+                                <img class="hero_img" src="./img/hero_img.png" alt="img">
+                                <h1 class="hero_title">Super Flash Sale
+                                    50% Off</h1>
+                            </div>
+                            <div class="slider_items">
+                                <img class="hero_img" src="./img/hero_slider.png" alt="img">
+                                <h1 class="hero_title2">Super Flash Sale
+                                    40% Off</h1>
+                            </div>
+                            <div class="slider_items">
+                                <img class="hero_img" src="./img/hero_slider_2.png" alt="img">
+                                <h1 class="hero_title3">Super Flash Sale
+                                    30% Off</h1>
+                            </div>
+                        </div>
+
                     </div>
-                    <h1 class="hero_title">Super Flash Sale
-                        50% Off</h1>
+
                 </div>
                 <div class="hero_card_block">
                     <div class="hero_card1">
@@ -108,9 +125,10 @@
             <div class="container">
                 <h1 class="seller_title">BEST SELLER</h1>
                 <div class="tab_buttons">
-                    <button class="tab_btn tab_btn_active" data-tab="products">electronics</button>
-                    <button class="tab_btn" data-tab="products/category/jewelery">jewelery</button>
-                    <button class="tab_btn" data-tab="products?limit">women's clothing</button>
+                    <button class="tab_btn tab_btn_active" data-tab="electronics">electronics</button>
+                    <button class="tab_btn" data-tab="jewelery">jewelery</button>
+                    <button class="tab_btn" data-tab="men's clothing">men's clothing</button>
+                    <button class="tab_btn" data-tab="women's clothing">women's clothing</button>
                 </div>
                 <!--  -->
                 <div class="tab_content">
@@ -187,9 +205,16 @@
     <!-- heart_modal -->
     <div class="heart_modal">
         <div class="heart_modal_content">
-            <button class="heart_modal_exit_btn">X</button>
         </div>
     </div>
+
+    <!-- buy modal -->
+    <div class="buy_modal">
+        <div class="buy_modal_content"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="./slick.min.js"></script>
     <script src="./main.js"></script>
 </body>
 

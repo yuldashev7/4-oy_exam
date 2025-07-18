@@ -1,5 +1,4 @@
 .seller {
-    padding-top: 63px;
     padding-bottom: 24px;
 }
 
@@ -7,7 +6,7 @@
     font-weight: 600;
     font-size: 35px;
     color: #22262a;
-    margin-top: 250px;
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -16,8 +15,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 20px;
-    width: 388px;
+    margin-bottom: 40px;
+    width: 535px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 26px;
@@ -63,6 +62,8 @@
     flex-direction: column;
     gap: 10px;
     position: relative;
+    width: 300px;
+    height: 500px;
 }
 
 .nike_card:hover {
@@ -113,6 +114,55 @@
 
 // 
 
+.nike_card_img {
+    position: relative;
+    overflow: hidden;
+}
+
+.nike_card_img_ {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.nike_card_hover_btns {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: none;
+    gap: 10px;
+}
+
+.nike_card_like_btn,
+.nike_card_buy_btn {
+    width: 52px;
+    height: 52px;
+    border: none;
+    background-color: inherit;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.nike_card_like_btn {
+    background-image: url(../../svg/nike_card_like.svg);
+}
+
+.nike_card_buy_btn {
+    background-image: url(../../svg/nike_card_buy.svg);
+}
+
+.nike_card_img:hover .nike_card_img_ {
+    opacity: 0;
+}
+
+.nike_card_img:hover .nike_card_hover_btns {
+    display: flex;
+}
+
 
 
 
@@ -136,11 +186,12 @@
 
 .nike_card_hover_btns {
     position: absolute;
-    top: 90px;
-    right: 80px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    pointer-events: auto;
 }
 
 .nike_card_img_:hover {
@@ -148,13 +199,11 @@
     transition: opacity 0.3s ease;
 }
 
-.nike_card_img:hover .nike_card_hover_btns {
-    opacity: 1;
-}
 
 
 .nike_card_img {
     position: relative;
+    overflow: hidden;
 }
 
 .seller_bottom_text {
@@ -201,7 +250,8 @@
     padding-bottom: 10px;
     padding-left: 21px;
     width: 308px;
-     border: 2px solid #bcddfe;
+    border: 2px solid #bcddfe;
+    outline: none;
 }
 
 .seller_bottom_btn {
@@ -222,4 +272,62 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 51px;
+}
+
+
+
+.heart_modal_content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.heart_modal_item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 16px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    margin-top: 20px;
+}
+
+.heart_modal_item:hover {
+    transform: scale(1.01);
+}
+
+.heart_modal_item_img img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+}
+
+.heart_modal_item_info {
+    flex-grow: 1;
+}
+
+.sale_card_title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.sale_card_price {
+    font-size: 14px;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.sale_card_category {
+    font-size: 12px;
+    color: #777;
 }
